@@ -1,0 +1,65 @@
+$primary: #16a34a;
+$primary-dark: #15803d;
+
+.page-header {
+  display: flex; align-items: flex-start; justify-content: space-between;
+  margin-bottom: 1.5rem; flex-wrap: wrap; gap: 1rem;
+  h1 { font-size: 1.5rem; color: $primary-dark; margin: 0; display: flex; align-items: center; gap: 0.5rem; }
+  .subtitle { color: #6b7280; font-size: 0.9rem; }
+}
+
+.btn-primary {
+  background: $primary; color: #fff; border: none; border-radius: 8px;
+  padding: 0.6rem 1.2rem; font-size: 0.9rem; cursor: pointer;
+  display: flex; align-items: center; gap: 0.4rem; font-weight: 600;
+  &:hover { background: $primary-dark; }
+  &:disabled { opacity: 0.5; cursor: not-allowed; }
+}
+
+.btn-secondary {
+  background: #f3f4f6; color: #374151; border: 1px solid #e5e7eb;
+  border-radius: 8px; padding: 0.6rem 1.2rem; font-size: 0.9rem;
+  cursor: pointer; margin-right: 0.5rem;
+  &:hover { background: #e5e7eb; }
+}
+
+.card-table {
+  background: #fff; border-radius: 12px;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.07); overflow: hidden;
+}
+
+.table-caption { padding: 0.75rem 0; }
+
+.search-input {
+  width: 280px; border-radius: 8px !important; font-size: 0.875rem;
+  @media (max-width: 480px) { width: 100%; }
+}
+
+.cliente-nome-cell { display: flex; align-items: center; gap: 0.6rem; }
+
+.avatar {
+  width: 32px; height: 32px; border-radius: 50%;
+  background: #dcfce7; color: $primary-dark;
+  display: flex; align-items: center; justify-content: center;
+  font-weight: 700; font-size: 0.875rem; flex-shrink: 0;
+}
+
+.badge-red { background: #fee2e2; color: #dc2626; padding: 0.2rem 0.6rem; border-radius: 20px; font-size: 0.8rem; font-weight: 600; }
+.badge-green { background: #dcfce7; color: $primary-dark; padding: 0.2rem 0.6rem; border-radius: 20px; font-size: 0.8rem; font-weight: 600; }
+
+.actions { display: flex; gap: 0.4rem; }
+.btn-icon {
+  width: 32px; height: 32px; border: none; border-radius: 6px; cursor: pointer;
+  display: flex; align-items: center; justify-content: center; font-size: 0.85rem;
+  &.btn-edit { background: #dbeafe; color: #2563eb; &:hover { background: #2563eb; color: #fff; } }
+  &.btn-delete { background: #fee2e2; color: #dc2626; &:hover { background: #dc2626; color: #fff; } }
+}
+
+.empty-row { text-align: center; color: #9ca3af; padding: 2rem !important; }
+
+.form-group {
+  margin-bottom: 1rem;
+  label { display: block; font-weight: 600; color: #374151; margin-bottom: 0.4rem; font-size: 0.875rem; }
+  .w-full { width: 100%; }
+  .hint { color: #6b7280; font-size: 0.75rem; margin-top: 0.25rem; display: block; }
+}

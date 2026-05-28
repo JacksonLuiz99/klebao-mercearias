@@ -1,0 +1,96 @@
+$primary: #16a34a;
+$primary-dark: #15803d;
+
+.page-header {
+  margin-bottom: 1.5rem;
+  h1 { font-size: 1.5rem; color: $primary-dark; margin: 0; display: flex; align-items: center; gap: 0.5rem; i { font-size: 1.2rem; } }
+  .subtitle { color: #6b7280; font-size: 0.9rem; }
+}
+
+.stats-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 1rem;
+  margin-bottom: 2rem;
+}
+
+.stat-card {
+  background: #fff;
+  border-radius: 12px;
+  padding: 1.25rem;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.08);
+  border-left: 4px solid;
+
+  &.stat-green { border-color: #16a34a; .stat-icon { background: #dcfce7; color: #16a34a; } }
+  &.stat-red { border-color: #dc2626; .stat-icon { background: #fee2e2; color: #dc2626; } }
+  &.stat-orange { border-color: #ea580c; .stat-icon { background: #ffedd5; color: #ea580c; } }
+  &.stat-blue { border-color: #2563eb; .stat-icon { background: #dbeafe; color: #2563eb; } }
+}
+
+.stat-icon {
+  width: 48px; height: 48px; border-radius: 10px;
+  display: flex; align-items: center; justify-content: center;
+  i { font-size: 1.3rem; }
+  flex-shrink: 0;
+}
+
+.stat-info {
+  display: flex; flex-direction: column;
+  .stat-value { font-size: 1.4rem; font-weight: 700; color: #111827; }
+  .stat-label { font-size: 0.8rem; color: #6b7280; }
+}
+
+.section-title {
+  display: flex; align-items: center; justify-content: space-between;
+  margin-bottom: 1rem;
+  h2 { font-size: 1.1rem; color: #374151; margin: 0; display: flex; align-items: center; gap: 0.5rem; i { color: #ea580c; } }
+  .ver-todos { color: $primary; text-decoration: none; font-size: 0.875rem; display: flex; align-items: center; gap: 0.25rem; &:hover { text-decoration: underline; } }
+}
+
+.empty-state {
+  text-align: center; padding: 3rem; color: #9ca3af;
+  i { font-size: 3rem; color: #16a34a; display: block; margin-bottom: 0.75rem; }
+  p { margin: 0; font-size: 1rem; }
+}
+
+.devedores-list { display: flex; flex-direction: column; gap: 0.75rem; }
+
+.devedor-card {
+  background: #fff;
+  border-radius: 10px;
+  padding: 1rem 1.25rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.07);
+  border: 1px solid #f1f5f9;
+  transition: box-shadow 0.2s;
+  &:hover { box-shadow: 0 4px 12px rgba(0,0,0,0.1); }
+}
+
+.devedor-info { display: flex; align-items: center; gap: 0.75rem; }
+
+.devedor-avatar {
+  width: 42px; height: 42px; border-radius: 50%;
+  background: #dcfce7; color: $primary-dark;
+  display: flex; align-items: center; justify-content: center;
+  font-weight: 700; font-size: 1.1rem; flex-shrink: 0;
+}
+
+.devedor-nome { font-weight: 600; color: #111827; font-size: 0.95rem; }
+.devedor-itens { font-size: 0.8rem; color: #6b7280; }
+
+.devedor-actions { display: flex; align-items: center; gap: 0.75rem; }
+
+.devedor-valor { font-weight: 700; color: #dc2626; font-size: 1rem; }
+
+.btn-cobrar {
+  width: 36px; height: 36px; border-radius: 8px;
+  background: #dcfce7; color: $primary;
+  display: flex; align-items: center; justify-content: center;
+  text-decoration: none; transition: background 0.2s;
+  &:hover { background: $primary; color: #fff; }
+}
